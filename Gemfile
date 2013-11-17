@@ -32,6 +32,24 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+
+group :test, :development do
+	# only do stuff on your machine
+end
+
+group :production do
+	# only do stuff on heroku
+end
+
+
+
+
+
+
+gem 'simple_form'
+
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
