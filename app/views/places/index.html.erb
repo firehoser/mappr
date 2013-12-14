@@ -9,6 +9,16 @@
 
 		Address: <%= @place.address %>
 
+		<br />
+
+		Lat: <%= @place.lat %>
+		<br />
+
+		Lng: <%= @place.lng %>
+
+
+
+
 
     <script src="//maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyDzleZt1Cn-Ha1cn19cC8LOKVFueX_iYB4"
             type="text/javascript"></script>
@@ -28,9 +38,9 @@
 
       if (GBrowserIsCompatible()) {
         var map = new GMap2(document.getElementById("map_canvas"));
-        map.setCenter(new GLatLng(37.4419, -122.1419), 13);
+        map.setCenter(new GLatLng(<%= @place.lat %>, <%= @place.lng %>), 13);
  
-          var point = new GLatLng(37.4419, -122.1419);
+          var point = new GLatLng(<%= @place.lat %>, <%= @place.lng %>);
           map.addOverlay(new GMarker(point));
 
 
